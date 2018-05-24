@@ -125,10 +125,10 @@ MonoBehaviour:
   listeningRate: 0.5
   refuseStep: 5
   shakeIntensity: 3
-  shakeDuration: 2
+  shakeDuration: 6
   maxDefusePoints: 100
   isBeingDefused: 0
-  bombPS: {fileID: 1917839890102346, guid: 2f306330cea656e4db0a148267601215, type: 2}
+  bombPS: {fileID: 1005465448851856, guid: 0450a39481aebf6439e7028b3646d189, type: 2}
 --- !u!198 &198226636327287798
 ParticleSystem:
   m_ObjectHideFlags: 1

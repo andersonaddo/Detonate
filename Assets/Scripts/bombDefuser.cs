@@ -17,7 +17,11 @@ public class bombDefuser : MonoBehaviour {
     {
         if (collider.gameObject.layer != LayerMask.NameToLayer(bombLayer)) return;
         defuseInstructions.SetActive(false);
-        currentBomb = null;
+        if (currentBomb != null)
+        {
+            currentBomb.isBeingDefused = false;
+            currentBomb = null;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)

@@ -8,6 +8,7 @@ public class gameManager : MonoBehaviour {
     public int bombCooldown, gameLevelIndex, numberOfBombs;
     int currentCooldown;
     public List<bomb> bombs;
+    public AudioClip bombExplosion;
     public static gameManager Instance;
     public GameObject pausePanel;
 
@@ -47,8 +48,11 @@ public class gameManager : MonoBehaviour {
             {
                 foreach (bomb bomb in bombs)
                 {
+                    if (bomb == null) continue;
                     bomb.detonate();
                 }
+                GetComponent<AudioSource>().PlayOneShot(bombExplosion);
+                yield return new WaitForSeconds(2);
                 endGame(true);
             }
         }

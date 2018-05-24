@@ -41,6 +41,7 @@ public class generateWalls : MonoBehaviour {
             }
         }
 
+        //These two lines are added because of a Unity bug in which tilemap colliders don't update unless reenabled
         wallTilemap.gameObject.SetActive(false);
         wallTilemap.gameObject.SetActive(true);
 
